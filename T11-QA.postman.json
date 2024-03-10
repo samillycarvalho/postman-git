@@ -1,0 +1,81 @@
+{
+	"id": "08dc31d0-fc9c-49dc-a6e8-81c5d5e63a61",
+	"name": "T11-QA",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://postman-treinamento.qacoders-academy.com.br/api",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "Mail\n",
+			"value": "",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "AccessProfile",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "CPF",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "FirstName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "LastName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "FullName",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "cnpj",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "idCompany",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Password",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "ProviderMail",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "Mail",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-03-09T17:54:29.632Z",
+	"_postman_exported_using": "Postman/10.22.13"
+}
