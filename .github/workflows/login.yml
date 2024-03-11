@@ -1,0 +1,46 @@
+# This is a basic workflow to help you started with Actions
+#!/usr/bash env bash
+name: login
+
+# Controls when the workflow will run
+on:
+# Trigger the workflow on push or pull request events but only for the "main" branch
+push: 
+  branches: [ "main" ]
+  pull_request: [ "main" ]
+
+# Allows you run this workflow manually from the Actions tab
+workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs: 
+# This workflow contains a single job called "build"
+ build: 
+ # The type odf runner that the job will run on
+ runs-on: zsh-konsole
+
+# steps represent a sequence of tasks that will be executed as part of the job
+steps:
+# Checks-out your repository under $GITHUB_WORKSPACE, so your job can acess it
+- uses: actions/checkout@v3
+
+# Runs a single command using the runners shell
+- name: Step 1 check version Newman and Node 
+run: 
+       newman --version
+       node --version
+# Runs a set of command using the runners shell
+- name: Step 2 Install Newman-Reporter-Htmlextra
+  run: npm install -g newman-reporter-htmlextra
+
+
+# Runs a set of commands using the runners shell
+- name: Step 3 Execute collections
+run: newman run ./2_login.json -g ./globals.json -e ./T11-QA.Postman.json --delay-request 1 --reporters cli, -r htmlextra --reporter-htmlextra-export ./result/report.html
+
+# Runs a set of commands using the runners shell
+- name: Step 4 Archive production artifacts 
+uses: actions/uploud-artifact@v3 
+with: 
+     name: report
+     path: ./result/report.html
